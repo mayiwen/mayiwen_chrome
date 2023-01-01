@@ -109,6 +109,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if ('f' === request.key.toLowerCase()) { this.toRight() }
     if ('b' === request.key.toLowerCase()) { toUrl('https://www.baidu.com/') }
     if ('v' === request.key.toLowerCase()) { toUrl('https://www.douyin.com/') }
+    if ('g' === request.key.toLowerCase()) { toUrl('https://www.github.com/') }
   }
   console.log(request)
   console.log(sender)

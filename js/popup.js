@@ -87,6 +87,7 @@ function key(key) {
   if (key.code === 'KeyF') toRight();
   if (key.code === 'KeyB') toUrl('https://www.baidu.com/')
   if (key.code === 'KeyV') toUrl('https://www.douyin.com/')
+  if (key.code === 'KeyG') toUrl('https://www.github.com/')
   
 }
 /** 按键绑定 */
@@ -110,5 +111,6 @@ document.querySelector('#toExtensions').onclick = () => { toUrl('chrome://extens
 document.querySelector('#toBaidu').onclick = () => { toUrl('https://www.baidu.com/') };
 document.querySelector('#toDouyin').onclick = () => { toUrl('https://www.douyin.com/') };
 document.querySelector('#clearData').onclick = () => { toUrl('chrome://settings/clearBrowserData') };
+document.querySelector('#toGithub').onclick = () => { toUrl('https://www.github.com/') };
 document.querySelector('body').onkeyup = key;
 document.querySelector('#getBackgroundPage').onclick = getBackgroundPage;
