@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "mayiwen",
+  "version": "0.0.0.1",
+  "description": "maiwen quick start",
+  "chrome_url_overrides": {
+    "newtab": "./start.html"
+  },
+  "icons": {
+    "128": "img/icon.png",
+    "48": "img/icon.png",
+    "16": "img/icon.png"
+  },
+  "action": {
+    "default_icon": "img/icon.png",
+    "default_title": "mayiwen",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "cookies",
+    "webRequest",
+    "management",
+    "storage",
+    "tabs",
+    "contextMenus",
+    "activeTab",
+    "background"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Q",
+        "mac": "Ctrl+Q"
+      },
+      "description": "Opens hello.html"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["./css/content.css"],
+      "js": ["./js/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
